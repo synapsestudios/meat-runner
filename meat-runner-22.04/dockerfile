@@ -1,5 +1,5 @@
 FROM ghcr.io/actions/actions-runner:2.313.0
-LABEL org.opencontainers.image.source=https://github.com/synapsestudios/synops
+LABEL org.opencontainers.image.source=https://github.com/synapsestudios/meat-runner
 
 SHELL ["/bin/bash", "--login", "-c"]
 WORKDIR /home/runner
