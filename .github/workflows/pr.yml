@@ -27,10 +27,16 @@ jobs:
         id: set_image_name
 
       - name: Set up Docker
-        uses: docker/setup-buildx-action@v1
+        uses: docker/setup-buildx-action@v3
 
-      - name: Build Docker image
-        run: docker build -t ${{ steps.set_image_name.outputs.image_name }}:latest ${{ matrix.image_folder }}/.
+      - name: Build and push to GHA
+        uses: docker/build-push-action@v5
+        with:
+          context: ${{ matrix.image_folder }}/.
+          push: true
+          tags: synapsestudios/${{ steps.set_image_name.outputs.image_name }}:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
       - name: Check build status
-        run: docker run --rm ${{ steps.set_image_name.outputs.image_name }}:latest
+        run: docker run --rm synapsestudios/${{ steps.set_image_name.outputs.image_name }}:latest
