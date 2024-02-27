@@ -1,0 +1,25 @@
+name: Create Matrix
+
+on:
+  workflow_call:
+    inputs:
+      image_directory:
+        description: "Directory that contains image directories e.g. images/image1, images/image2, ..."
+        required: true
+        type: string
+    outputs:
+      matrix:
+        description: "Matrix of image directories"
+        value: ${{ jobs.create_matrix.outputs.matrix }}
+
+jobs:
+  create_matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.1.1
+      - id: set-matrix
+        run: |
+          echo "matrix=$(ls -d ${{ inputs.image_directory }}/* | jq -R -s -c 'split("\n")[:-1]')" >> $GITHUB_OUTPUT
