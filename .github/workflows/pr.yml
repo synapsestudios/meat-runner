@@ -33,10 +33,9 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ${{ matrix.image_folder }}/.
-          push: true
           tags: ${{ steps.set_image_name.outputs.image_name }}:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
       - name: Check build status
-        run: docker run --rm synapsestudios/${{ steps.set_image_name.outputs.image_name }}:latest
+        run: docker run --rm ${{ steps.set_image_name.outputs.image_name }}:latest
