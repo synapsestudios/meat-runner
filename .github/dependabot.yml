@@ -1,6 +1,6 @@
 version: 2
 updates:
   - package-ecosystem: "docker"
-    directory: "meat-runner-22.04/"
+    directory: "images/meat-runner-22.04/"
     schedule:
       interval: "daily"
