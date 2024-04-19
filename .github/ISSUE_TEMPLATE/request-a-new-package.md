@@ -7,9 +7,9 @@ assignees: ''
 
 ---
 
-# Proposal: Add <package_name> to meat-runner
+### Proposal: Add <package_name> to meat-runner
 
-## Requirements
+### Requirements
 
 * **Package:** Briefly describe the package you'd like to add and its purpose (e.g., "Add `jq` for processing JSON data").
 * **Implementation:** Outline how to add the package (version, configuration, potential conflicts). Include a code snippet if applicable.
@@ -18,11 +18,11 @@ assignees: ''
   * Package Name (In apt repository): 
 * **Alternatives:** Discuss other options considered and why this package is preferred.
 
-## Example:
+# Example:
 
-# Proposal: Add jq to Shared Dockerfile
+### Proposal: Add jq to to meat-runner
 
-## Requirements
+### Requirements
 We need the `jq` package as it's a common dependency across our organization.
 
 * **Package:** Add `jq` (lightweight command-line JSON processor) to parse and manipulate JSON data within our applications.
