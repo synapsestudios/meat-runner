@@ -3,6 +3,12 @@ Home for Github Actions runner images based on `ghcr.io/actions/actions-runner` 
 
 # Packages
 
+## To request a package to be added to the image
+
+1. Open an issue using the `Request a New Package` template.
+2. Fill out the template with the requested package information.
+3. Submit the issue.
+
 ### List of packages installed in the image
 
 | Package  | Version    | Configuration           |
