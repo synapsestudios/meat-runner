@@ -32,5 +32,7 @@ RUN source $HOME/.bashrc
 RUN nvm install --lts
 RUN for version in $NODE_VERSIONS; do nvm install $version; done
 RUN nvm use --lts
+# Install global NPM packages
+RUN npm install -g yarn
 SHELL ["/bin/bash", "--login", "-c"]
 CMD ["/home/runner/run.sh"]

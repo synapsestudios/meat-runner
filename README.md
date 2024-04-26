@@ -23,3 +23,9 @@ Home for Github Actions runner images based on `ghcr.io/actions/actions-runner` 
 | node     | 18, 20, 21 | defaults to lts         |
 | nvm      | 0.39.7     |                         |
 | apt-fast | latest     | --no-install-recommends |
+
+### List of global NPM packages installed in the image
+
+| Package  | Version    | Configuration           |
+|----------|------------|-------------------------|
+| yarn     | v1.22.29   |                         |
