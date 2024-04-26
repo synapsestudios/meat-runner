@@ -20,6 +20,7 @@ RUN apt-get install -y openjdk-17-jdk
 RUN apt-get install -y gradle
 RUN apt-get install -y npm
 RUN apt-get install -y wget
+RUN apt-get install -y docker-compose-plugin
 
 ARG NVM_VERSION=0.39.7
 ARG NODE_VERSIONS="18 20 21"
