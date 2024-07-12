@@ -1,16 +1,16 @@
 # meat-runner
 
-Home for Github Actions runner images based on `ghcr.io/actions/actions-runner` from https://github.com/actions/runner
+Home for Github Actions runner images based on the [actions/runner](https://github.com/actions/runner) image.
 
-# Packages
+## Packages
 
-## To request a package to be added to the image
+### To request a package to be added to the image
 
-1. Open an issue using the `Request a New Package` template.
+1. Open an issue using the [`Request a New Package`](https://github.com/synapsestudios/meat-runner/issues/new?assignees=&labels=new+package&projects=&template=request-a-new-package.md&title=%5BNew+Package%5D+-+package_name) template.
 2. Fill out the template with the requested package information.
 3. Submit the issue.
 
-### List of packages installed in the image
+#### List of packages installed in the image
 
 | Package        | Version    | Configuration           |
 | -------------- | ---------- | ----------------------- |
@@ -27,7 +27,7 @@ Home for Github Actions runner images based on `ghcr.io/actions/actions-runner` 
 | docker         | latest     |                         |
 | docker-compose | v2         |                         |
 
-### List of global NPM packages installed in the image
+#### List of global NPM packages installed in the image
 
 | Package | Version  | Configuration |
 | ------- | -------- | ------------- |
