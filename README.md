@@ -14,18 +14,19 @@ Home for Github Actions runner images based on the [actions/runner](https://gith
 
 | Package        | Version    | Configuration           |
 | -------------- | ---------- | ----------------------- |
-| curl           | latest     |                         |
-| unzip          | latest     |                         |
-| zip            | latest     |                         |
-| jq             | latest     |                         |
-| openjdk        | 17         |                         |
-| gradle         | latest     |                         |
-| npm            | 10.5.2     |                         |
-| node           | 18, 20, 21 | defaults to lts         |
-| nvm            | 0.39.7     |                         |
 | apt-fast       | latest     | --no-install-recommends |
+| curl           | latest     |                         |
 | docker         | latest     |                         |
 | docker-compose | v2         |                         |
+| gradle         | latest     |                         |
+| helm           | v3.14.0    |                         |
+| jq             | latest     |                         |
+| node           | 18, 20, 21 | defaults to lts         |
+| npm            | 10.5.2     |                         |
+| nvm            | 0.39.7     |                         |
+| openjdk        | 17         |                         |
+| unzip          | latest     |                         |
+| zip            | latest     |                         |
 
 #### List of global NPM packages installed in the image
 
