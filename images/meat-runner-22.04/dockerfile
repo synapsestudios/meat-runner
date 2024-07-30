@@ -31,6 +31,12 @@ RUN set -o pipefail && echo \
     tee /etc/apt/sources.list.d/docker.list > /dev/null
 RUN apt-get update && apt-get install -y docker-compose-plugin
 
+# Install Helm v3
+ARG HELM_VERSION=3.14.0
+RUN set -o pipefail && curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | tee /usr/share/keyrings/helm.gpg > /dev/null
+RUN set -o pipefail && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] https://baltocdn.com/helm/stable/debian/ all main" | tee /etc/apt/sources.list.d/helm-stable-debian.list
+RUN apt-get update && apt-get install -y helm=${HELM_VERSION}-1
+
 ARG NVM_VERSION=0.39.7
 ARG NODE_VERSIONS="18 20 21"
 # Switch back to runner user to install nvm
