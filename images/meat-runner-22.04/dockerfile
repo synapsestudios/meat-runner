@@ -20,6 +20,10 @@ RUN apt-get install -y openjdk-17-jdk
 RUN apt-get install -y gradle
 RUN apt-get install -y npm
 RUN apt-get install -y wget
+RUN apt-get install -y pipx
+
+# Add pipx to PATH
+RUN pipx ensurepath
 
 # Install Docker Compose
 RUN install -m 0755 -d /etc/apt/keyrings
