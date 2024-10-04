@@ -1,4 +1,4 @@
-FROM ghcr.io/actions/actions-runner:2.319.1
+FROM ghcr.io/actions/actions-runner:2.320.0
 LABEL org.opencontainers.image.source=https://github.com/synapsestudios/meat-runner
 
 SHELL ["/bin/bash", "--login", "-c"]
